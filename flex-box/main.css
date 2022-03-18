@@ -1,0 +1,18 @@
+h1 {
+  display: block;
+  background-color: lightgreen;
+}
+
+[menu] {
+  display: flex;
+  flex-direction: row;
+  background-color: lightblue;
+  flex-flow: row-reverse;
+}
+[menu-item] {
+}
+
+[submenu] {
+  display: flex;
+  flex-direction: column;
+}
