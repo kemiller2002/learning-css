@@ -7,75 +7,89 @@
     <link rel="stylesheet" href="main.css"></style>
   </head>
   <body>
-    <div>
-      <h1>Pizza Punisher</h1>
-      <h2>For people you love</h2>
-      <div menu>
+    <div header>
+      <h1 title>Pizza Punisher</h1>
+      <h2 tag-line>For people you love</h2>
+    </div>
+    
+    <div menu>
         <div menu-item>Account</div>
         <div menu-item>Pizzas</div>
         <div menu-item>Drinks</div>
         <div menu-item>Side Items</div>
         <div menu-item>Toys Items</div>
-      </div>
-
-      <div submenu>
-        <div menu-item>Popular Items</div>
-        <div menu-item>Un-Popular Items</div>
-        <div menu-item>Random Sayings</div>
-        <div menu-item>Vulgar Obscenities</div>
-      </div>
-
-      <div entry-information>
-        <section>
-        <div address-line-2>
-          <label>Address:
-            <input type="text" id="address-line-1" name="address-line-1" />
-          </label>
-        </div>
-
-        <div city>
-          <label for="city">city:</label>
-          <input type="text" id="city" name="city" />
-        </div>
-
-        <div state>
-          <label>State:</label>
-          <input type="text" id="firstName" name="firstName" />
-        </div>
-
-        <div address-line-1>
-          <label>Address:</label>
-          <input type="text" id="firstName" name="firstName" />
-        </div>
-
-        <div last-name>
-          <label>Last Name:</label>
-          <input type="text" id="firstName" name="firstName" />
-        </div>
-
-        <div first-name>
-            <label>First Name:</label>
-            <input type="text" id="firstName" name="firstName" />
-        </div>
-      </section>
-      <section>
-        <div pizza-toppings>
-          <div toppings></div>
-          <label pizza-toppings>
-            <select>
-              <option>Dry Pepperoni</option>
-              <option>Overcooked Sausage</option>
-              <option>Vegan Cheese</option>
-              <option>Anchovies That Taste Like Sardines</option>
-              <option>Some Green Vegetable Thing</option>
-              <option>Some Red Vegetable Thing</option>
-              <option>Some Black Vegetable Thing</option>
-            </select>
-            <button>ADD TOPPING</button>
-          </label>
-        </div>
-      </section>
-      </div>
     </div>
+
+      <div main>
+
+        <div left-main submenu>
+          <div menu-item>Popular Items</div>
+          <div menu-item>Un-Popular Items</div>
+          <div menu-item>Random Sayings</div>
+          <div menu-item>Vulgar Obscenities</div>
+        </div>
+
+        <div entry-information center-main>
+          <section ship-to>
+            <div address-line-2>
+              <label>Address Line 2:
+                <input type="text" id="address-line-2" name="address-line-2" />
+              </label>
+            </div> 
+
+            <div city>
+              <label for="city">City:</label>
+              <input type="text" id="city" name="city" />
+            </div>
+
+            <div state>
+              <label>State:</label>
+              <input type="text" id="state" name="state" />
+            </div>
+
+            <div address-line-1>
+              <label>Address:</label>
+              <input type="text" id="address-line-1" name="address-line-1" />
+            </div>
+
+            <div last-name>
+              <label>Last Name:</label>
+              <input type="text" id="lastName" name="lastName" />
+            </div>
+
+            <div first-name>
+                <label>First Name:</label>
+                <input type="text" id="firstName" name="firstName" />
+            </div>
+          </section>
+          <section>
+            <div pizza-toppings>
+              <div toppings>
+                  <topping>Dry Pepperoni</topping>
+                  <topping>Overcooked Sausage</topping>
+                  <topping>Vegan Cheese</topping>
+                  <topping>Anchovies That Taste Like Sardines</topping>
+                  <topping>Some Green Vegetable Thing</topping>
+                  <topping>Some Red Vegetable Thing</topping>
+                  <topping>Some Black Vegetable Thing</topping>
+              </div>
+              <label pizza-toppings>
+                <select>
+                  <option>Dry Pepperoni</option>
+                  <option>Overcooked Sausage</option>
+                  <option>Vegan Cheese</option>
+                  <option>Anchovies That Taste Like Sardines</option>
+                  <option>Some Green Vegetable Thing</option>
+                  <option>Some Red Vegetable Thing</option>
+                  <option>Some Black Vegetable Thing</option>
+                </select>
+                <button>ADD TOPPING</button>
+              </label>
+            </div>
+          </section>
+        </div>
+        <div right-main></div>
+    </div>
+    <div footer></div>
   </body>
 </html>
