@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <style>
+      [note] {
+        font-weight: 600;
+      }
+
+      [html-attribute]::before {
+        content: "[";
+      }
+
+      [html-attribute]::after {
+        content: "]";
+      }
+
+      [html-attribute] ~ [html-element]::before {
+        content: " > ";
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div>Make the main body expand the full width of the page.</div>
+        <div><span html-element>html,body</span></div>
+        <ol>
+          <li add-code>display: flex;</li>
+          <li add-code>flex-direction: column;</li>
+        </ol>
+
+        <div><span html-attribute>menu</span></div>
+        <ol>
+          <li add-code>flex: 1 1 auto;</li>
+        </ol>
+      </li>
+
+      <li>
+        CHECK
+        <div>Set menu items to be in a row</div>
+        <div><span html-attribute>menu</span></div>
+        <ol>
+          <li add-code>display: flex;</li>
+        </ol>
+
+        <div html-attribute>menu</div>
+        <ol>
+          <li code>flex: 1 1 auto;</li>
+        </ol>
+      </li>
+
+      <li>
+        <div>Set the length of the shipping items</div>
+        <div><span html-attribute>ship-to</span><span html-element>div</span></div>
+        <ol>
+          <li add-code>display: flex;</li>
+          <li add-code>flex-direction: column;</li>
+        </ol>
+      </li>
+
+      <li>
+        <div>Set the menu items in the correct row</div>
+        <div><span html-attribute>ship-to</span></div>
+        <ol>
+          <li add-code>display: flex;</li>
+          <li add-code>flex-direction: column;</li>
+        </ol>
+      </li>
+
+      <li>
+        <div>Set the menu items in the correct row</div>
+        <div><span html-attribute>ship-to</span></div>
+        <ol>
+          <li add-code>display: flex;</li>
+          <li add-code>flex-direction: column;</li>
+        </ol>
+      </li>
+
+      <li>
+        <div>Set the menu items in the correct row</div>
+        <div><span html-attribute>toppings</span></div>
+        <ol>
+          <li add-code>display: flex;</li>
+          <li add-code>flex-direction: row-reverse;</li>
+          <li add-code>flex-wrap: wrap;</li>
+          <li add-code>justify-content: left;</li>
+        </ol>
+      </li>
+
+      <li>
+        <div>Join drop down list and button</div>
+        <div><span html-element>label</span><span html-attribute>pizza-toppings</span></div>
+        <ol>
+          <li add-code>display: flex;</li>
+          <li add-code>flex-direction: row;</li>
+          <li add-code>justify-content: center;</li>
+        </ol>
+      </li>
+
+      <li>
+        <div>Align Header</div>
+        <div><span html-attribute>header</span></div>
+        <ol>
+          <li add-code>display: flex;</li>
+          <li add-code>align-items: baseline;</li>
+          <li add-code>justify-content: center;</li>
+        </ol>
+      </li>
+    </ul>
+  </body>
+</html>
