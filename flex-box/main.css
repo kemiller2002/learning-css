@@ -1,26 +1,18 @@
 html,
 body {
   height: 100%;
-  /*  display: flex;
-  flex-direction: column;*/
 }
 
 [main] {
-  display: flex;
-  /*flex: 1 1 auto;*/
-  justify-content: space-between;
 }
 
 [menu] {
-  /*display: flex;*/
   background-color: lightblue;
   box-shadow: 0px 5px 5px #999;
 }
 
 [entry-information] {
   margin-top: 0.5em;
-  /*display: flex; CHECK
-  flex-direction: column;*/
 }
 
 [menu] > [menu-item] {
@@ -42,9 +34,6 @@ body {
 }
 
 [submenu] {
-  /*TEST*/
-  /*display: flex;
-  flex-direction: column;*/
   padding-top: 0.5em;
 }
 
@@ -53,46 +42,30 @@ body {
 }
 
 [ship-to] > div {
-  /*display: flex;
-  flex-direction: column;*/
 }
 
 [ship-to] {
-  /*display: flex;
-  flex-direction: column;*/
 }
 
 div > label {
-  display: flex;
-  flex-direction: column;
 }
 
-/*[section] {
-  display: flex;
-}*/
-
 [first-name] {
-  /*order: 1;*/
 }
 
 [last-name] {
-  /*order: 2;*/
 }
 
 [state] {
-  /*order: 5;*/
 }
 
 [address-line-1] {
-  /*order: 3;*/
 }
 
 [address-line-2] {
-  /*order: 4;*/
 }
 
 [city] {
-  /*order: 4;*/
 }
 
 [header] {
@@ -100,10 +73,6 @@ div > label {
   color: #fff;
   padding: 0em;
   margin: 0;
-
-  /*  display: flex;
-  align-items: baseline;*/
-
   padding-left: 1em;
 }
 
@@ -114,10 +83,6 @@ div > label {
 }
 
 [toppings] {
-  /*display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  justify-content: left;*/
   margin-bottom: 0.5em;
 }
 
@@ -127,7 +92,6 @@ topping {
   border: thin solid darkgray;
   padding: 0.25em;
   border-radius: 0.2em;
-  /*flex-grow: 0;*/
 }
 
 [pizza-toppings] {
@@ -139,9 +103,6 @@ topping {
 }
 
 label[pizza-toppings] {
-  /*  display: flex;
-  flex-direction: row;
-  justify-content: center;*/
 }
 
 [toppings-subheader] {

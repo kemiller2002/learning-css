@@ -10,6 +10,10 @@
         font-weight: 600;
       }
 
+      [html-element] > [html-element]::before {
+        content: " > ";
+      }
+
       [html-attribute]::before {
         content: "[";
       }
@@ -71,11 +75,6 @@
         <ol>
           <li add-code>display: flex;</li>
         </ol>
-
-        <div html-attribute>menu</div>
-        <ol>
-          <li code>flex: 1 1 auto;</li>
-        </ol>
       </li>
 
       <li>
@@ -124,6 +123,26 @@
           <li add-code>display: flex;</li>
           <li add-code>align-items: baseline;</li>
           <li add-code>justify-content: center;</li>
+        </ol>
+      </li>
+
+      <li>
+        <div>Setup main display</div>
+        <div><span html-attribute>main</span></div>
+        <ol>
+          <li add-code>display: flex;</li>
+          <li add-code>justify-content: space-between;</li>
+        </ol>
+      </li>
+
+      <li>
+        <div>Setup Address line 2</div>
+        <div>
+          <span html-element>div <span html-element>label</span></span>
+        </div>
+        <ol>
+          <li add-code>display: flex;</li>
+          <li add-code>flex-direction: column;</li>
         </ol>
       </li>
 
