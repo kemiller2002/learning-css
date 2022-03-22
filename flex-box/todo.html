@@ -16,7 +16,69 @@
       [html-attribute] ~ [html-element]::before {
         content: " > ";
       }
+
+      input:checked ~ label {
+        text-decoration: line-through;
+      }
     </style>
+
+    <script>
+      function setup(document) {
+        let codeItems = document.querySelectorAll("[add-code]");
+        let createCheckbox = (document, id) => {
+          const checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+          checkbox.name = id;
+          checkbox.id = id;
+          checkbox.addEventListener("change", () => saveDocument(document));
+          return checkbox;
+        };
+
+        let createLabel = (id, text) => {
+          const label = document.createElement("label");
+          label.name = "lbl" + id;
+          label.id = "lbl" + id;
+          label.setAttribute("for", id);
+          label.innerHTML = text;
+          return label;
+        };
+
+        let generateHash = (str) => {
+          var hash = 0,
+            i,
+            chr;
+          if (str.length === 0) return hash;
+          for (i = 0; i < str.length; i++) {
+            chr = str.charCodeAt(i);
+            hash = (hash << 5) - hash + chr;
+            hash |= 0; // Convert to 32bit integer
+          }
+          return hash;
+        };
+
+        let replace = (document, entry) => {
+          const id = generateHash(entry.parentElement.parentElement.innerHTML + entry.innerHTML);
+          const text = entry.innerHTML;
+          entry.innerHTML = null;
+          entry.append(createCheckbox(document, id));
+          entry.append(createLabel(id, text));
+        };
+
+        codeItems.forEach((item) => replace(document, item));
+      }
+
+      function saveDocument(document) {
+        const saved = document.querySelectorAll(":checked");
+
+        console.log(JSON.stringify(saved));
+      }
+
+      (() => {
+        document.addEventListener("DOMContentLoaded", (ev) => {
+          setup(ev.target);
+        });
+      })();
+    </script>
   </head>
   <body>
     <ul>
@@ -31,6 +93,14 @@
         <div><span html-attribute>menu</span></div>
         <ol>
           <li add-code>flex: 1 1 auto;</li>
+        </ol>
+      </li>
+
+      <li>
+        <div>Set layout to be 3 columns</div>
+        <div><span html-attribute>menu</span></div>
+        <ol>
+          <li add-code>display: flex;</li>
         </ol>
       </li>
 
@@ -103,6 +173,44 @@
           <li add-code>display: flex;</li>
           <li add-code>align-items: baseline;</li>
           <li add-code>justify-content: center;</li>
+        </ol>
+      </li>
+
+      <li>
+        <div>Set order of shipping address</div>
+        <div><span html-attribute>ship-to</span></div>
+        <ol>
+          <li add-code>display: flex;</li>
+          <li add-code>flex-direction: column;</li>
+        </ol>
+        <div><span html-attribute>first-name</span></div>
+        <ol>
+          <li add-code>order: 1;</li>
+        </ol>
+
+        <div><span html-attribute>last-name</span></div>
+        <ol>
+          <li add-code>order: 2;</li>
+        </ol>
+
+        <div><span html-attribute>state</span></div>
+        <ol>
+          <li add-code>order: 5;</li>
+        </ol>
+
+        <div><span html-attribute>address-line-1</span></div>
+        <ol>
+          <li add-code>order: 3;</li>
+        </ol>
+
+        <div><span html-attribute>address-line-2</span></div>
+        <ol>
+          <li add-code>order: 4;</li>
+        </ol>
+
+        <div><span html-attribute>city</span></div>
+        <ol>
+          <li add-code>order: 4;</li>
         </ol>
       </li>
     </ul>

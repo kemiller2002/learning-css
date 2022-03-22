@@ -19,8 +19,8 @@ body {
 
 [entry-information] {
   margin-top: 0.5em;
-  display: flex;
-  flex-direction: column;
+  /*display: flex; CHECK
+  flex-direction: column;*/
 }
 
 [menu] > [menu-item] {
@@ -35,7 +35,6 @@ body {
   padding-left: 1em;
   padding-right: 1em;
   color: white;
-  flex-grow: 0;
 }
 
 [center-main] {
@@ -59,8 +58,8 @@ body {
 }
 
 [ship-to] {
-  display: flex;
-  flex-direction: column;
+  /*display: flex;
+  flex-direction: column;*/
 }
 
 div > label {
@@ -68,32 +67,32 @@ div > label {
   flex-direction: column;
 }
 
-[section] {
+/*[section] {
   display: flex;
-}
+}*/
 
 [first-name] {
-  order: 1;
+  /*order: 1;*/
 }
 
 [last-name] {
-  order: 2;
+  /*order: 2;*/
 }
 
 [state] {
-  order: 5;
+  /*order: 5;*/
 }
 
 [address-line-1] {
-  order: 3;
+  /*order: 3;*/
 }
 
 [address-line-2] {
-  order: 4;
+  /*order: 4;*/
 }
 
 [city] {
-  order: 4;
+  /*order: 4;*/
 }
 
 [header] {
